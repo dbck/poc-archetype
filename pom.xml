@@ -6,7 +6,7 @@
   <parent>
     <groupId>de.dbck.poc</groupId>
     <artifactId>poc-bom</artifactId>
-    <version>1.0.21</version>
+    <version>1.0.23</version>
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
 
@@ -15,11 +15,6 @@
   <description>POC Archetype</description>
   <name>${project.artifactId}</name>
   <url>https://github.com/dbck/${project.artifactId}</url>
-
-  <properties>
-    <maven-archetype-plugin.version>3.2.0</maven-archetype-plugin.version>
-    <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
-  </properties>
 
   <scm>
     <url>${project.url}</url>
@@ -74,11 +69,6 @@
             <!-- See https://issues.apache.org/jira/browse/MRESOURCES-190 -->
             <addDefaultExcludes>false</addDefaultExcludes>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>${maven-archetype-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
