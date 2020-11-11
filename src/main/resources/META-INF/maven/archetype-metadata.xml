@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="${artifactId}">
+  <requiredProperties>
+    <requiredProperty key="groupId">
+      <defaultValue>de.dbck.poc</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="artifactId" />
+    <requiredProperty key="package" />
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8">
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.mvn/wrapper</directory>
+      <includes>
+        <include>**/*.properties</include>
+        <include>**/*.jar</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <!-- Changed file name to rename it manually after project generation-->
+        <!-- See: https://issues.apache.org/jira/browse/ARCHETYPE-505 -->
+        <include>.gitignore_</include>
+        <include>.github/</include>
+        <include>.editorconfig</include>
+        <include>mvnw</include>
+        <include>mvnw.cmd</include>
+        <include>README.md</include>
+      </includes>
+      <excludes>
+        <exclude>src/**</exclude>
+        <exclude>.mvn/**</exclude>
+        <exclude>.DS_Store</exclude>
+        <exclude>.apt_generated</exclude>
+        <exclude>.classpath</exclude>
+        <exclude>.factorypath</exclude>
+        <exclude>.project</exclude>
+        <exclude>.springBeans</exclude>
+        <exclude>.settings/</exclude>
+        <exclude>.sts4-cache/</exclude>
+        <exclude>.idea</exclude>
+        <exclude>*.iws</exclude>
+        <exclude>*.iml</exclude>
+        <exclude>*.ipr</exclude>
+        <exclude>.nb-gradle/</exclude>
+        <exclude>target/</exclude>
+        <exclude>build/</exclude>
+        <exclude>dist/</exclude>
+        <exclude>nbbuild/</exclude>
+        <exclude>nbdist/</exclude>
+        <exclude>nbproject/private/</exclude>
+      </excludes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
