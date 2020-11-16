@@ -1,33 +1,9 @@
-# Generate project from archetype
-
-```
-export ARCHETYPE_VERSION="0.0.1-SNAPSHOT"
-export GROUP_ID="de.dbck.poc"
-export ARTIFACT_ID="poc-artifactid"
-mvn archetype:generate -DinteractiveMode=false \
-                       -DarchetypeGroupId=de.dbck.poc \
-                       -DarchetypeArtifactId=poc-archetype \
-                       -DarchetypeVersion=${ARCHETYPE_VERSION} \
-                       -DgroupdId=${GROUP_ID} \
-                       -DartifactId=${ARTIFACT_ID} \
-                       -Dpackage=${GROUP_ID}.${ARTIFACT_ID/-/}
-cd ${ARTIFACT_ID}
-git init
-git checkout -b main
-git add .
-git commit -m "Initial"
-mvn compile
-git remote add origin https://github.com/dbck/${ARTIFACT_ID}.git
-git push --set-upstream origin main
-```
-
 # Local development environment
 
 ## Compile / Install
 
 ```
-mvn clean install archetype:update-local-catalog
-mvn archetype:crawl
+mvn install
 ```
 
 ## Quality check

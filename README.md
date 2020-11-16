@@ -1,4 +1,4 @@
-$(sed -e's/-//g' <<< ${ARTIFACT_ID})# Generate project from archetype
+# Generate project from archetype
 
 ```
 export ARCHETYPE_VERSION="0.0.2" # CHOOSE ARCHTETYPE VERSION
