@@ -6,7 +6,7 @@
   <parent>
     <groupId>de.dbck.poc</groupId>
     <artifactId>poc-bom</artifactId>
-    <version>1.0.23</version>
+    <version>1.0.25</version>
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
 
@@ -34,6 +34,14 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -127,6 +135,12 @@
   <profiles>
     <profile>
       <id>github</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>ossrh</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
