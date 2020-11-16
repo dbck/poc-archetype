@@ -12,11 +12,12 @@ mvn archetype:generate -DinteractiveMode=false \
                        -DartifactId=${ARTIFACT_ID} \
                        -Dpackage=${GROUP_ID}.${ARTIFACT_ID/-/}
 cd ${ARTIFACT_ID}
-mvn compile
+mv .gitignore_ .gitignore
 git init
 git checkout -b main
 git add .
 git commit -m "Initial"
+mvn compile
 git remote add origin https://github.com/dbck/${ARTIFACT_ID}.git
 git push --set-upstream origin main
 ```
