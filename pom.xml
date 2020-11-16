@@ -11,7 +11,7 @@
   </parent>
 
   <artifactId>poc-archetype</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <description>POC Archetype</description>
   <name>${project.artifactId}</name>
   <url>https://github.com/dbck/${project.artifactId}</url>
